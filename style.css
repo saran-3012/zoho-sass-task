@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Lato';
-  src: url("/assets/fonts/Lato/Lato-BoldItalic.woff2") format("woff2"), url("/assets/fonts/Lato/Lato-BoldItalic.woff") format("woff");
+  src: url("./assets/fonts/Lato/Lato-BoldItalic.woff2") format("woff2"), url("./assets/fonts/Lato/Lato-BoldItalic.woff") format("woff");
   font-weight: bold;
   font-style: italic;
   font-display: swap;
@@ -8,7 +8,7 @@
 
 @font-face {
   font-family: 'Lato';
-  src: url("/assets/fonts/Lato/Lato-Black.woff2") format("woff2"), url("/assets/fonts/Lato/Lato-Black.woff") format("woff");
+  src: url("./assets/fonts/Lato/Lato-Black.woff2") format("woff2"), url("./assets/fonts/Lato/Lato-Black.woff") format("woff");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
@@ -16,7 +16,7 @@
 
 @font-face {
   font-family: 'Lato';
-  src: url("/assets/fonts/Lato/Lato-Bold.woff2") format("woff2"), url("/assets/fonts/Lato/Lato-Bold.woff") format("woff");
+  src: url("./assets/fonts/Lato/Lato-Bold.woff2") format("woff2"), url("./assets/fonts/Lato/Lato-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -24,7 +24,7 @@
 
 @font-face {
   font-family: 'Lato';
-  src: url("/assets/fonts/Lato/Lato-BlackItalic.woff2") format("woff2"), url("/assets/fonts/Lato/Lato-BlackItalic.woff") format("woff");
+  src: url("./assets/fonts/Lato/Lato-BlackItalic.woff2") format("woff2"), url("./assets/fonts/Lato/Lato-BlackItalic.woff") format("woff");
   font-weight: 900;
   font-style: italic;
   font-display: swap;
@@ -32,7 +32,7 @@
 
 @font-face {
   font-family: 'Lato Hairline';
-  src: url("/assets/fonts/Lato/Lato-HairlineItalic.woff2") format("woff2"), url("/assets/fonts/Lato/Lato-HairlineItalic.woff") format("woff");
+  src: url("./assets/fonts/Lato/Lato-HairlineItalic.woff2") format("woff2"), url("./assets/fonts/Lato/Lato-HairlineItalic.woff") format("woff");
   font-weight: 300;
   font-style: italic;
   font-display: swap;
@@ -40,7 +40,7 @@
 
 @font-face {
   font-family: 'Lato';
-  src: url("/assets/fonts/Lato/Lato-Light.woff2") format("woff2"), url("/assets/fonts/Lato/Lato-Light.woff") format("woff");
+  src: url("./assets/fonts/Lato/Lato-Light.woff2") format("woff2"), url("./assets/fonts/Lato/Lato-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -48,7 +48,7 @@
 
 @font-face {
   font-family: 'Lato';
-  src: url("/assets/fonts/Lato/Lato-LightItalic.woff2") format("woff2"), url("/assets/fonts/Lato/Lato-LightItalic.woff") format("woff");
+  src: url("./assets/fonts/Lato/Lato-LightItalic.woff2") format("woff2"), url("./assets/fonts/Lato/Lato-LightItalic.woff") format("woff");
   font-weight: 300;
   font-style: italic;
   font-display: swap;
@@ -56,7 +56,7 @@
 
 @font-face {
   font-family: 'Lato';
-  src: url("/assets/fonts/Lato/Lato-Regular.woff2") format("woff2"), url("/assets/fonts/Lato/Lato-Regular.woff") format("woff");
+  src: url("./assets/fonts/Lato/Lato-Regular.woff2") format("woff2"), url("./assets/fonts/Lato/Lato-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -64,7 +64,7 @@
 
 @font-face {
   font-family: 'Lato';
-  src: url("/assets/fonts/Lato/Lato-Italic.woff2") format("woff2"), url("/assets/fonts/Lato/Lato-Italic.woff") format("woff");
+  src: url("./assets/fonts/Lato/Lato-Italic.woff2") format("woff2"), url("./assets/fonts/Lato/Lato-Italic.woff") format("woff");
   font-weight: normal;
   font-style: italic;
   font-display: swap;
@@ -72,7 +72,7 @@
 
 @font-face {
   font-family: 'Lato Hairline';
-  src: url("/assets/fonts/Lato/Lato-Hairline.woff2") format("woff2"), url("/assets/fonts/Lato/Lato-Hairline.woff") format("woff");
+  src: url("./assets/fonts/Lato/Lato-Hairline.woff2") format("woff2"), url("./assets/fonts/Lato/Lato-Hairline.woff") format("woff");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -264,7 +264,7 @@ body {
 }
 
 .dropdown .dropdown-arrow, .connect-task-popup-assign .connect-task-popup-assign-box .connect-task-popup-assign-status .dropdown-arrow, .connect-task-popup-config-list .connect-task-popup-config .connect-task-popup-config-box .connect-task-popup-config-innerbox .dropdown-arrow {
-  background-image: url("/assets/svg/dropdown-arrow.svg");
+  background-image: url("./assets/svg/dropdown-arrow.svg");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -422,7 +422,7 @@ body {
 .navbar-route-context div {
   width: 1rem;
   height: 1rem;
-  background-image: url("/assets/images/globle-icon.png");
+  background-image: url("./assets/images/globle-icon.png");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -447,7 +447,7 @@ body {
 }
 
 .sidebar-logo {
-  background-image: url("/assets/images/zoho-one.png");
+  background-image: url("./assets/images/zoho-one.png");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -496,7 +496,7 @@ body {
 }
 
 .sidebar-route-link div.sidebar-connect-icon {
-  background-image: url("/assets/images/zoho-connect.png");
+  background-image: url("./assets/images/zoho-connect.png");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
