@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Zoho Connect - New Task</title>
+</head>
+<body>
+    <header class="navbar">
+        <div class="navbar-route-context float-left">
+            <strong>Connect</strong>
+            <p></p>
+            <div></div>
+        </div>
+        <div class="navbar-menu float-right">
+            <!-- Add navbar right side menu here -->
+        </div>
+    </header>
+    <aside class="sidebar">
+        <a href="/" class="sidebar-logo-box no-decoration">
+            <div class="sidebar-logo"></div>
+        </a>
+        <nav class="sidebar-menu-box">
+            <ul class="sidebar-menu-list">
+                <li class="sidebar-menu-item">
+                    <a href="/" class="sidebar-route-link active">
+                        <div class="sidebar-connect-icon"></div>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+    <main class="main">
+
+
+        <!-- For popup box -->
+        <div class="popup-container">
+            <div class="popup-wrapper">
+                <span class="popup-header ft-sm">
+                    Create New Task
+                </span>
+                <div class="popup-model">
+                    <button class="button popup-close-button br-transparent br-circle pd-sq bg-grey-tr ft-white">
+                        <div class="button-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 22.88 22.88" xml:space="preserve" >
+                                <path d="M.324 1.909a1.14 1.14 0 0 1 0-1.587 1.14 1.14 0 0 1 1.587 0l9.523 9.539L20.973.322a1.12 1.12 0 0 1 1.571 0 1.112 1.112 0 0 1 0 1.587l-9.523 9.524 9.523 9.539a1.112 1.112 0 0 1 0 1.587 1.12 1.12 0 0 1-1.571 0l-9.539-9.539-9.523 9.539a1.14 1.14 0 0 1-1.587 0c-.429-.444-.429-1.159 0-1.587l9.523-9.539L.324 1.909z" fill="currentColor" data-original="#1e201d" />
+                            </svg>
+                        </div>
+                    </button>
+                    <!-- Connect new task popup -->
+
+                    <div class="connect-task-popup">
+
+                        <!-- Connect new task popup left side part -->
+                        <div class="connect-task-popup-left">
+                            <input class="text-input connect-task-popup-title" type="text" placeholder="Add Task title">
+
+                            <div class="connect-task-popup-description">
+                                <p>Add Task notes</p>
+                            </div>
+
+                            <div class="connect-task-popup-checklist">
+                                <button class="button pd-none br-transparent bg-transparent ft-green">
+                                    <div class="button-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve">
+                                            <path d="M256 .001C114.842.001.001 114.842.001 256S114.842 511.999 256 511.999 511.999 397.159 511.999 256 397.158.001 256 .001zm0 479.998C132.487 479.999 32.001 379.513 32.001 256S132.487 32.001 256 32.001 479.999 132.486 479.999 256c0 123.513-100.486 223.999-223.999 223.999zM398 256c0 8.837-7.164 16-16 16H272v110c0 8.837-7.164 16-16 16s-16-7.163-16-16V272H130c-8.836 0-16-7.163-16-16s7.164-16 16-16h110V130c0-8.837 7.164-16 16-16s16 7.163 16 16v110h110c8.836 0 16 7.164 16 16z" fill="currentColor" opacity="1" data-original="#000000" />
+                                        </svg>
+                                    </div>
+                                    <span class="ft-sm">Add Checklist</span>
+                                </button>
+                            </div>
+
+                            <div class="connect-task-popup-tasktype">
+                                <p class="ft-xs ft-grey">Where do you want to add this Task?</p>
+                                <div class=" dropdown connect-task-popup-dropdown">
+                                    <div class="dropdown-context">
+                                        <div class="tick-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 511.999 511.999" xml:space="preserve">
+                                                <path d="M506.231 75.508c-7.689-7.69-20.158-7.69-27.849 0l-319.21 319.211L33.617 269.163c-7.689-7.691-20.158-7.691-27.849 0-7.69 7.69-7.69 20.158 0 27.849l139.481 139.481c7.687 7.687 20.16 7.689 27.849 0l333.133-333.136c7.69-7.691 7.69-20.159 0-27.849z" fill="currentColor" opacity="1" data-original="#000000" />
+                                            </svg>
+                                        </div>
+                                        <p class="ft-sm">Where do you want to add this Task?</p>
+                                    </div>
+                                    <div class="dropdown-arrow"></div>
+                                </div>
+                            </div>
+
+                            <div class="connect-task-popup-assign">
+                                <div class="svg-icon ft-white bg-orange br-circle">
+                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 64 64" xml:space="preserve">
+                                        <g>
+                                            <path d="M32 64A32 32 0 1 1 45.42 2.941a1 1 0 0 1-.84 1.816A29.978 29.978 0 1 0 59.243 19.42a1 1 0 1 1 1.816-.84A32.016 32.016 0 0 1 32 64Z" fill="currentColor" opacity="1" data-original="#000000" />
+                                            <path d="M54 55h-2a20 20 0 0 0-40 0h-2a22 22 0 0 1 44 0Z" fill="currentColor" opacity="1" data-original="#000000"/>
+                                            <path d="M32 35a11 11 0 1 1 11-11 11.013 11.013 0 0 1-11 11Zm0-20a9 9 0 1 0 9 9 9.011 9.011 0 0 0-9-9ZM54 23a1 1 0 0 1-1-1v-1.851a4.97 4.97 0 0 1 3.226-4.575A6.042 6.042 0 0 0 60 9.914 6.115 6.115 0 0 0 54.085 4a5.849 5.849 0 0 0-4.3 1.728A5.958 5.958 0 0 0 48 10a1 1 0 0 1-2 0 8 8 0 0 1 8.113-8 8 8 0 0 1 2.855 15.431A2.983 2.983 0 0 0 55 20.149V22a1 1 0 0 1-1 1Z" fill="currentColor" opacity="1" data-original="#000000" />
+                                            <circle cx="54" cy="25" r="1" fill="currentColor" opacity="1" data-original="#000000" />
+                                        </g>
+                                    </svg>
+                                </div>
+                                <div class="connect-task-popup-assign-box">
+                                    <span class="ft-grey ft-xs">Assigned to</span>
+                                    <div class="connect-task-popup-assign-status">
+                                        <span class="ft-sm wt-700">Unassigned</span>
+                                        <div class="dropdown-arrow"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="connect-task-popup-attachments">
+                                <button class="button ft-grey br-grey br-dashed br-rounded bg-grey">
+                                    <div class="button-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 417.416 417.416" xml:space="preserve" >
+                                            <path d="M392.526 38.439c-16.077-16.076-37.451-24.93-60.187-24.93s-44.11 8.854-60.187 24.93L19.295 291.297c-25.727 25.727-25.727 67.587 0 93.314 12.863 12.863 29.76 19.295 46.657 19.295 16.896 0 33.793-6.432 46.656-19.295l199.146-199.146c18.247-18.247 18.247-47.937 0-66.185-18.247-18.247-47.938-18.247-66.185 0l-127.94 127.939c-3.905 3.905-3.905 10.237 0 14.143s10.238 3.905 14.142 0l127.94-127.939c10.448-10.449 27.451-10.449 37.899 0 10.449 10.449 10.449 27.451 0 37.9L98.467 370.469c-17.929 17.928-47.101 17.929-65.03 0-8.685-8.685-13.468-20.232-13.468-32.515s4.783-23.83 13.468-32.515L286.294 52.582c12.299-12.299 28.651-19.072 46.045-19.072s33.746 6.773 46.044 19.072c25.389 25.389 25.389 66.7 0 92.089L196.731 326.323c-3.905 3.905-3.905 10.237 0 14.143s10.237 3.905 14.143 0l181.652-181.652c33.186-33.188 33.186-87.188 0-120.375z" fill="currentColor" opacity="1" data-original="#000000"/>
+                                        </svg>
+                                    </div>
+                                    <span class="ft-grey ft-sm">Add Attachments</span>
+                                </button>
+                            </div>
+
+                            <div class="connect-task-popup-buttons">
+                                <button class="button bg-transparent br-transparent ft-underline ft-grey">Clear</button>
+                                <div class="connect-task-popup-buttons-box">
+                                    <button class="button pd-sm br-rounded br-dark-grey ft-grey ft-sm bg-transparent">Cancel</button>
+                                    <button class="button pd-sm br-rounded br-dark-green ft-white ft-sm bg-dark-green">Create</button>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- Connect new task popup right side part -->
+                        <div class="connect-task-popup-right">
+                            <ul class="connect-task-popup-config-list">
+                                <li class="connect-task-popup-config">
+                                    <div class="svg-icon ft-grey sz-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" >
+                                            <path d="M446 40h-46V16c0-8.836-7.163-16-16-16s-16 7.164-16 16v24H144V16c0-8.836-7.163-16-16-16s-16 7.164-16 16v24H66C29.607 40 0 69.607 0 106v340c0 36.393 29.607 66 66 66h380c36.393 0 66-29.607 66-66V106c0-36.393-29.607-66-66-66zM66 72h46v16c0 8.836 7.163 16 16 16s16-7.164 16-16V72h224v16c0 8.836 7.163 16 16 16s16-7.164 16-16V72h46c18.748 0 34 15.252 34 34v38H32v-38c0-18.748 15.252-34 34-34zm380 408H66c-18.748 0-34-15.252-34-34V176h448v270c0 18.748-15.252 34-34 34z" fill="currentColor" opacity="1" data-original="#000000" />
+                                        </svg>
+                                    </div>
+                                    <div class="connect-task-popup-config-box">
+                                        <span class="ft-grey ft-xs">Start date</span>
+                                        <div class="connect-task-popup-config-innerbox">
+                                            <span class="ft-sm">Not set yet</span>
+                                            <div class="dropdown-arrow"></div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="connect-task-popup-config">
+                                    <div class="svg-icon ft-grey sz-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" >
+                                            <path d="M446 40h-46V16c0-8.836-7.163-16-16-16s-16 7.164-16 16v24H144V16c0-8.836-7.163-16-16-16s-16 7.164-16 16v24H66C29.607 40 0 69.607 0 106v340c0 36.393 29.607 66 66 66h380c36.393 0 66-29.607 66-66V106c0-36.393-29.607-66-66-66zM66 72h46v16c0 8.836 7.163 16 16 16s16-7.164 16-16V72h224v16c0 8.836 7.163 16 16 16s16-7.164 16-16V72h46c18.748 0 34 15.252 34 34v38H32v-38c0-18.748 15.252-34 34-34zm380 408H66c-18.748 0-34-15.252-34-34V176h448v270c0 18.748-15.252 34-34 34z" fill="currentColor" opacity="1" data-original="#000000" />
+                                        </svg>
+                                    </div>
+                                    <div class="connect-task-popup-config-box">
+                                        <span class="ft-grey ft-xs">Due on</span>
+                                        <div class="connect-task-popup-config-innerbox">
+                                            <span class="ft-sm">Not set yet</span>
+                                            <div class="dropdown-arrow"></div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="connect-task-popup-config">
+                                    <div class="svg-icon ft-grey sz-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 379.5 379.5" xml:space="preserve">
+                                            <g>
+                                                <path d="m81.425 332.434-18.563 28.563c-3.593 5.569-2.036 12.994 3.533 16.587 2.036 1.317 4.252 1.916 6.527 1.916 3.952 0 7.785-1.916 10.06-5.449l18.144-27.905c25.988 15.449 56.288 24.372 88.624 24.372 32.396 0 62.695-8.922 88.624-24.431l18.084 27.905c2.275 3.533 6.168 5.449 10.06 5.449 2.216 0 4.491-.599 6.527-1.916 5.569-3.593 7.126-11.018 3.533-16.587l-18.503-28.563c39.761-31.797 65.33-80.72 65.33-135.511 0-95.75-77.905-173.655-173.655-173.655S16.095 101.113 16.095 196.863c0 54.791 25.569 103.714 65.33 135.571zM189.75 47.16c82.576 0 149.703 67.127 149.703 149.703S272.326 346.566 189.75 346.566 40.047 279.439 40.047 196.863 107.174 47.16 189.75 47.16z" fill="currentColor" opacity="1" data-original="#000000" />
+                                                <path d="M229.751 247.822c2.275 1.976 5.09 2.934 7.904 2.934a12.03 12.03 0 0 0 9.042-4.072c4.371-4.97 3.832-12.515-1.138-16.886l-43.833-38.384V95.065c0-6.587-5.389-11.976-11.976-11.976s-11.976 5.389-11.976 11.976v101.798c0 3.473 1.497 6.767 4.072 9.042zM40.047 62.31c3.114 0 6.228-1.198 8.563-3.593C62.862 44.166 79.03 32.01 96.575 22.549c5.808-3.114 8.024-10.359 4.91-16.228-3.114-5.808-10.359-8.024-16.228-4.91-19.76 10.599-37.844 24.192-53.832 40.54-4.611 4.731-4.551 12.335.18 16.946 2.394 2.276 5.448 3.413 8.442 3.413zM282.925 22.549c17.605 9.401 33.713 21.617 47.965 36.168 2.335 2.395 5.449 3.593 8.563 3.593a12.03 12.03 0 0 0 8.383-3.413c4.731-4.611 4.79-12.216.18-16.946-15.928-16.288-34.072-29.941-53.833-40.539-5.868-3.114-13.114-.898-16.228 4.91-3.054 5.868-.898 13.113 4.97 16.227z" fill="currentColor" opacity="1" data-original="#000000"/>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                    <div class="connect-task-popup-config-box">
+                                        <span class="ft-grey ft-xs">Remainder</span>
+                                        <div class="connect-task-popup-config-innerbox">
+                                            <span class="ft-sm">Not set yet</span>
+                                            <div class="dropdown-arrow"></div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="connect-task-popup-config">
+                                    <div class="svg-icon ft-grey sz-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve">
+                                            <path d="M232.166 89.539c6.248 6.248 6.248 16.379 0 22.627s-16.379 6.248-22.627 0l-57.54-57.54V496c0 8.837-7.163 16-16 16s-16-7.163-16-16V54.628L62.46 112.166a15.957 15.957 0 0 1-11.313 4.687 15.943 15.943 0 0 1-11.313-4.687c-6.248-6.248-6.248-16.379 0-22.627l84.854-84.853c6.249-6.249 16.38-6.249 22.627 0zm240.001 310.294c-6.248-6.248-16.379-6.248-22.627 0l-57.539 57.539V16c0-8.837-7.163-16-16-16s-16 7.163-16 16v441.374l-57.539-57.541c-6.246-6.248-16.377-6.249-22.627 0-6.248 6.248-6.249 16.379 0 22.627l84.852 84.854a15.997 15.997 0 0 0 22.626 0l84.854-84.854c6.248-6.248 6.248-16.379 0-22.627z" fill="currentColor" opacity="1" data-original="#000000"/>
+                                        </svg>
+                                    </div>
+                                    <div class="connect-task-popup-config-box">
+                                        <span class="ft-grey ft-xs">Priority</span>
+                                        <div class="connect-task-popup-config-innerbox">
+                                            <span class="ft-sm">None</span>
+                                            <div class="dropdown-arrow"></div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="connect-task-popup-config hr-center">
+                                    <div class="svg-icon ft-grey sz-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" xml:space="preserve" >
+                                            <g transform="matrix(1.0649999999999997,0,0,1.0649999999999997,-1.039817861318589,-1.0400001549720734)">
+                                                <path d="M30.447 11.105a1 1 0 0 0-1.342.448l-.551 1.1a12.758 12.758 0 0 0-1.083-2.773A13.2 13.2 0 0 0 16 3a13 13 0 0 0-11.97 7.907 1 1 0 1 0 1.84.785 11.008 11.008 0 0 1 19.8-.932 10.768 10.768 0 0 1 .972 2.471l-.938-.938a1 1 0 0 0-1.414 1.414l3 3a1.024 1.024 0 0 0 1.6-.259l2-4a1 1 0 0 0-.443-1.343zM3.749 15.048a.938.938 0 0 0-.644.505l-2 4a1 1 0 0 0 .448 1.347 1.019 1.019 0 0 0 1.347-.453l.551-1.1a12.738 12.738 0 0 0 1.078 2.773 13.3 13.3 0 0 0 9.414 6.714A12.646 12.646 0 0 0 16 29a13 13 0 0 0 11.97-7.907 1 1 0 1 0-1.84-.785 11 11 0 0 1-20.775-1.539l.938.938a1 1 0 1 0 1.414-1.414l-3-3a1.109 1.109 0 0 0-.958-.245z" fill="currentColor" opacity="1" data-original="#000000" />
+                                            </g>
+                                        </svg>
+                                    </div>
+                                    <span class="connect-task-popup-config-innerbox ft-grey ft-sm">Repeat Task</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Connect new task popup -->
+
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

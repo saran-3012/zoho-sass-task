@@ -1,0 +1,805 @@
+@font-face {
+  font-family: 'Lato';
+  src: url("/assets/fonts/Lato/Lato-BoldItalic.woff2") format("woff2"), url("/assets/fonts/Lato/Lato-BoldItalic.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url("/assets/fonts/Lato/Lato-Black.woff2") format("woff2"), url("/assets/fonts/Lato/Lato-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url("/assets/fonts/Lato/Lato-Bold.woff2") format("woff2"), url("/assets/fonts/Lato/Lato-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url("/assets/fonts/Lato/Lato-BlackItalic.woff2") format("woff2"), url("/assets/fonts/Lato/Lato-BlackItalic.woff") format("woff");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lato Hairline';
+  src: url("/assets/fonts/Lato/Lato-HairlineItalic.woff2") format("woff2"), url("/assets/fonts/Lato/Lato-HairlineItalic.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url("/assets/fonts/Lato/Lato-Light.woff2") format("woff2"), url("/assets/fonts/Lato/Lato-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url("/assets/fonts/Lato/Lato-LightItalic.woff2") format("woff2"), url("/assets/fonts/Lato/Lato-LightItalic.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url("/assets/fonts/Lato/Lato-Regular.woff2") format("woff2"), url("/assets/fonts/Lato/Lato-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url("/assets/fonts/Lato/Lato-Italic.woff2") format("woff2"), url("/assets/fonts/Lato/Lato-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lato Hairline';
+  src: url("/assets/fonts/Lato/Lato-Hairline.woff2") format("woff2"), url("/assets/fonts/Lato/Lato-Hairline.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Variables */
+/* Mixins */
+/* General Config */
+*, *::after, *::before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  scroll-behavior: smooth;
+}
+
+img, svg {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+body {
+  width: 100svw;
+  height: 100svh;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* Utilities */
+.no-decoration, .sidebar-route-link {
+  text-decoration: none;
+  color: #000000;
+}
+
+.elipsis {
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  text-wrap: nowrap;
+}
+
+.ft-xs {
+  font-size: 0.75rem;
+}
+
+.ft-sm {
+  font-size: 0.875rem;
+}
+
+.ft-base {
+  font-size: 1rem;
+}
+
+.ft-lg {
+  font-size: 1.125rem;
+}
+
+.ft-underline {
+  text-decoration: underline;
+}
+
+.wt-700 {
+  font-weight: 700;
+}
+
+.ft-white {
+  color: #ffffff;
+}
+
+.ft-grey {
+  color: #4e566d;
+}
+
+.ft-green {
+  color: #28a078;
+}
+
+.bg-transparent {
+  background-color: transparent;
+}
+
+.bg-orange {
+  background-color: #febb2c;
+}
+
+.bg-grey {
+  background-color: #f4f4f6;
+}
+
+.bg-dark-grey {
+  background-color: #e3e8ee;
+}
+
+.bg-grey-tr {
+  background-color: #7d858eb3;
+}
+
+.bg-green {
+  background-color: #0fcd82;
+}
+
+.bg-dark-green {
+  background-color: #28a078;
+}
+
+.bg-deep-green {
+  background-color: #238c69;
+}
+
+.br-transparent {
+  border: 1px solid transparent;
+  border-radius: 0;
+}
+
+.br-grey {
+  border: 1px solid #e3e8ee;
+  border-radius: 0;
+}
+
+.br-dark-grey {
+  border: 1px solid #4e566d;
+  border-radius: 0;
+}
+
+.br-green {
+  border: 1px solid #0fcd82;
+  border-radius: 0;
+}
+
+.br-dark-green {
+  border: 1px solid #28a078;
+  border-radius: 0;
+}
+
+.br-deep-green {
+  border: 1px solid #238c69;
+  border-radius: 0;
+}
+
+.svg-icon {
+  width: 2rem;
+  height: 2rem;
+  padding: 0.5rem;
+}
+
+.svg-icon.sz-sm {
+  width: 1.4rem;
+  height: 1.4rem;
+  padding: 0.2rem;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.text-input {
+  border-radius: 0.5rem;
+  border: 2px solid #e3e8ee;
+  outline: none;
+}
+
+.text-input::-webkit-input-placeholder {
+  color: #4e566d;
+}
+
+.text-input:-ms-input-placeholder {
+  color: #4e566d;
+}
+
+.text-input::-ms-input-placeholder {
+  color: #4e566d;
+}
+
+.text-input::placeholder {
+  color: #4e566d;
+}
+
+.text-input:focus {
+  border-color: #4da1ff;
+}
+
+.dropdown .dropdown-arrow, .connect-task-popup-assign .connect-task-popup-assign-box .connect-task-popup-assign-status .dropdown-arrow, .connect-task-popup-config-list .connect-task-popup-config .connect-task-popup-config-box .connect-task-popup-config-innerbox .dropdown-arrow {
+  background-image: url("/assets/svg/dropdown-arrow.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 0.5rem;
+  height: 0.5rem;
+}
+
+.dropdown {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  border: 1px solid #bfc9d4;
+  border-radius: 0.25rem;
+  padding: 0.5rem 1.25rem 0.5rem 0.75rem;
+  cursor: pointer;
+}
+
+.dropdown .dropdown-context {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  gap: 0.25rem;
+  color: #4e566d;
+}
+
+.button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 0.5rem;
+  padding: 0.5rem 0.8rem;
+  outline: none;
+  border-width: 1px;
+  border-style: solid;
+  cursor: pointer;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+}
+
+.button .button-icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+.button.pd-none {
+  padding: 0;
+}
+
+.button.pd-sm {
+  padding: 0.375rem 0.625rem;
+}
+
+.button.pd-xs {
+  padding: 0.25rem 0.5rem;
+}
+
+.button.pd-sq {
+  padding: 0.75rem;
+}
+
+.br-dashed {
+  border-style: dashed;
+}
+
+.br-soft {
+  border-radius: 0.125rem;
+}
+
+.br-rounded {
+  border-radius: 0.25rem;
+}
+
+.br-circle {
+  border-radius: 100%;
+}
+
+/* Element styles */
+.navbar {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  height: 3rem;
+  width: 100%;
+  background-color: #272D42;
+  padding-left: 2.5rem;
+}
+
+.navbar-route-context {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 100%;
+  gap: 0.5rem;
+  color: #ffffff;
+  padding-left: 8px;
+}
+
+.navbar-route-context strong {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  line-height: 25.7143px;
+}
+
+.navbar-route-context p {
+  display: block;
+  background-color: #424756;
+  width: 1px;
+  height: 1rem;
+}
+
+.navbar-route-context div {
+  width: 1rem;
+  height: 1rem;
+  background-image: url("/assets/images/globle-icon.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.sidebar {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 2.5rem;
+  height: 100%;
+  background-color: #4A516B;
+}
+
+.sidebar-logo-box {
+  display: inline-block;
+  background-color: #343B51;
+  height: 3rem;
+  width: 2.5rem;
+  padding: 0.75rem 0.5rem;
+}
+
+.sidebar-logo {
+  background-image: url("/assets/images/zoho-one.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+
+.sidebar-menu-box {
+  width: 100%;
+}
+
+.sidebar-menu-list {
+  width: 100%;
+  margin-top: 5.5px;
+  list-style: none;
+}
+
+.sidebar-menu-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+}
+
+.sidebar-route-link {
+  display: block;
+  width: 30px;
+  height: 30px;
+  padding: 7.5px;
+  border-radius: 0.1875rem;
+}
+
+.sidebar-route-link div {
+  width: 100%;
+  height: 100%;
+}
+
+.sidebar-route-link div.sidebar-connect-icon {
+  background-image: url("/assets/images/zoho-connect.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.sidebar-route-link.active {
+  background-color: #ffffff;
+}
+
+.main {
+  padding-left: 2.5rem;
+  padding-top: 3rem;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.popup-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: fixed;
+  top: 3rem;
+  left: 2.5rem;
+  background-color: rgba(52, 65, 79, 0.8);
+  width: calc(100% - 2.5rem);
+  height: calc(100% - 3rem);
+}
+
+.popup-wrapper {
+  width: 700px;
+}
+
+.popup-header {
+  display: inline-block;
+  background-color: #0fcd82;
+  color: #ffffff;
+  padding: 10px 15px 8px;
+  border-radius: 0.25rem 0.25rem 0 0;
+}
+
+.popup-model {
+  position: relative;
+  width: 100%;
+  min-height: 350px;
+  border-top: 0.25rem solid #0fcd82;
+  background-color: #ffffff;
+  border-radius: 0 0.25rem 0.25rem 0.25rem;
+}
+
+.popup-close-button {
+  position: absolute;
+  top: 0;
+  right: -8%;
+}
+
+.connect-task-popup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+}
+
+.connect-task-popup-left {
+  max-width: 480px;
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+  padding: 35px 40px 20px;
+}
+
+.connect-task-popup-title {
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 1rem;
+}
+
+.connect-task-popup-description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  height: 2.375rem;
+  color: #4e566d;
+  padding: 6px 10px;
+  border-radius: 0.25rem;
+  margin-top: 1rem;
+}
+
+.connect-task-popup-description:hover {
+  background-color: #f4f4f6;
+}
+
+.connect-task-popup-checklist {
+  margin-top: 1rem;
+}
+
+.connect-task-popup-tasktype {
+  margin-top: 1.875rem;
+}
+
+.connect-task-popup-dropdown {
+  max-width: 20rem;
+}
+
+.connect-task-popup-dropdown .tick-icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+.connect-task-popup-assign {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-top: 1.875rem;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.connect-task-popup-assign .connect-task-popup-assign-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.connect-task-popup-assign .connect-task-popup-assign-box .connect-task-popup-assign-status {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 0.5rem;
+}
+
+.connect-task-popup-attachments {
+  margin-top: 2.5rem;
+}
+
+.connect-task-popup-attachments input {
+  opacity: 0;
+}
+
+.connect-task-popup-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-top: 1rem;
+}
+
+.connect-task-popup-buttons .connect-task-popup-buttons-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 1rem;
+}
+
+.connect-task-popup-right {
+  max-width: 220px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 35px 20px 20px;
+  background-color: #f4f4f6;
+}
+
+.connect-task-popup-config-list {
+  list-style: none;
+}
+
+.connect-task-popup-config-list .connect-task-popup-config {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-bottom: 40px;
+  gap: 0.8rem;
+}
+
+.connect-task-popup-config-list .connect-task-popup-config .connect-task-popup-config-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.25rem;
+}
+
+.connect-task-popup-config-list .connect-task-popup-config .connect-task-popup-config-box .connect-task-popup-config-innerbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.connect-task-popup-config-list .connect-task-popup-config.hr-center {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+/*# sourceMappingURL=style.css.map */
