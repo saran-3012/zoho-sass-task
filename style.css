@@ -373,6 +373,14 @@ body {
   border-radius: 100%;
 }
 
+.cr-blocked {
+  cursor: not-allowed;
+}
+
+.cr-pointer {
+  cursor: pointer;
+}
+
 /* Element styles */
 .navbar {
   position: fixed;

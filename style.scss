@@ -317,6 +317,16 @@ body{
     border-radius: 100%;
 }
 
+// Cursor
+
+.cr-blocked{
+    cursor: not-allowed;
+}
+
+.cr-pointer{
+    cursor: pointer;
+}
+
 /* Element styles */
 
 // Navbar
