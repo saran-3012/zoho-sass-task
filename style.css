@@ -630,6 +630,7 @@ body {
 
 .connect-task-popup-dropdown {
   max-width: 20rem;
+  margin-top: 0.3rem;
 }
 
 .connect-task-popup-dropdown .tick-icon {
@@ -693,8 +694,8 @@ body {
   margin-top: 2.5rem;
 }
 
-.connect-task-popup-attachments input {
-  opacity: 0;
+.connect-task-popup-attachments .button:hover.bg-grey {
+  background-color: #e3e8ee;
 }
 
 .connect-task-popup-buttons {
@@ -712,6 +713,19 @@ body {
       -ms-flex-direction: row;
           flex-direction: row;
   margin-top: 1rem;
+}
+
+.connect-task-popup-buttons .button:hover.ft-grey {
+  color: #000000;
+}
+
+.connect-task-popup-buttons .button:hover.br-dark-grey.bg-transparent {
+  background-color: #f4f4f6;
+}
+
+.connect-task-popup-buttons .button:hover.br-dark-green.bg-dark-green {
+  border-color: #238c69;
+  background-color: #238c69;
 }
 
 .connect-task-popup-buttons .connect-task-popup-buttons-box {
