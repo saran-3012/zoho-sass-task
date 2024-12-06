@@ -15,7 +15,13 @@
             <div></div>
         </div>
         <div class="navbar-menu float-right">
-            <!-- Add navbar right side menu here -->
+            <button class="button pd-none br-circle br-transparent bg-transparent ft-white add-task-popup-btn">
+                <div class="button-icon sz-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                    </svg>                  
+                </div>
+            </button>
         </div>
     </header>
     <aside class="sidebar">
@@ -34,6 +40,25 @@
     </aside>
     <main class="main">
 
+        <!-- Main Content -->
+
+        <section class="home">
+            <div class="home-box">
+                <div class="home-image-box">
+                    <img src="./assets/svg/artboard.svg" alt="Home artboard">
+                </div>
+                <h3>Network Dashboard</h3>
+                <p>Add multiple widgets, rearrange them according to your preference, and create a customized dashboard for your network.</p>
+                <button class="button bg-dark-green ft-white br-transparent br-rounded">
+                    <div class="button-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                        </svg>                  
+                    </div>
+                    <span>Create Dashboard</span>
+                </button>
+            </div>
+        </section>
 
         <!-- For popup box -->
         <div class="popup-container">
@@ -121,7 +146,7 @@
                             <div class="connect-task-popup-buttons">
                                 <button class="button bg-transparent br-transparent ft-underline ft-grey">Clear</button>
                                 <div class="connect-task-popup-buttons-box">
-                                    <button class="button pd-sm br-rounded br-dark-grey ft-grey ft-sm bg-transparent">Cancel</button>
+                                    <button class="button pd-sm br-rounded br-dark-grey ft-grey ft-sm bg-transparent" onclick="closePopup()">Cancel</button>
                                     <button class="button pd-sm br-rounded br-dark-green ft-white ft-sm bg-dark-green">Create</button>
                                 </div>
                             </div>

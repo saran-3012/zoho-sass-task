@@ -332,6 +332,10 @@ body {
   width: 1rem;
   height: 1rem;
 }
+.button .button-icon.sz-lg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
 .button.pd-none {
   padding: 0;
 }
@@ -388,6 +392,9 @@ body {
   width: 100%;
   background-color: #272D42;
   padding-left: 2.5rem;
+}
+.navbar .add-task-popup-btn {
+  margin: 0.75rem;
 }
 
 .navbar-route-context {
@@ -493,6 +500,45 @@ body {
   width: 100%;
   height: 100%;
   position: relative;
+  background-color: #e3e8ee;
+}
+
+.home {
+  width: 100%;
+  height: 100%;
+}
+.home .home-box {
+  margin: auto;
+  margin-top: 10rem;
+  max-width: 600px;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.home .home-box .home-image-box {
+  margin: auto;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.home .home-box h3 {
+  display: block;
+  margin: auto;
+  font-size: 1.25rem;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.home .home-box p {
+  display: block;
+  margin: auto;
+  margin-top: 1rem;
+  text-align: center;
+  color: grey;
+}
+.home .home-box .button {
+  margin: auto;
+  margin-top: 1rem;
+}
+.home .home-box .button:hover.bg-dark-green {
+  background-color: #238c69;
 }
 
 .popup-container {

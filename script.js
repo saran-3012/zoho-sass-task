@@ -138,3 +138,22 @@ calanders.forEach((calander) => {
     });
 
 });
+
+
+// Popup toggle
+
+const addTaskPopupButton = document.querySelector('.add-task-popup-btn');
+const popupCloseButton = document.querySelector('.popup-close-button');
+
+const popupContainer = document.querySelector('.popup-container');
+
+const openPopup = (e) => {
+    popupContainer.style.display = 'flex';
+};
+
+const closePopup = (e) => {
+    popupContainer.style.display = 'none';
+};
+
+addTaskPopupButton.addEventListener('click', openPopup);
+popupCloseButton.addEventListener('click', closePopup)
