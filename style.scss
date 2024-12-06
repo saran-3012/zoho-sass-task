@@ -7,12 +7,14 @@
 // Colors
 
 $grey-blue-tr: #7d858eb3;
+$grey-base : grey;
 $grey-blue-1: #bfc9d4;
 $grey-blue-2: #4A516B;
 $grey-blue-3: #424756;
 $grey-blue-4: #343B51;
 $grey-blue-5: #272D42;
 
+$light-green: #e0ffef;
 $green-1: #0fcd82;
 $green-2: #28a078;
 $green-3: #238c69;
@@ -29,6 +31,8 @@ $black: #000000;
 $white: #ffffff;
 
 $orange: #febb2c;
+
+$red: #ff4451;
 
 // Sizes
 
@@ -158,8 +162,16 @@ body{
     background-color: $grey-blue-tr;
 }
 
+.bg-light-green{
+    background-color: $light-green;
+}
+
 .bg-green{
     background-color: $green-1;
+}
+
+.bg-red{
+    background-color: $red;
 }
 
 .bg-dark-green{
@@ -246,6 +258,7 @@ body{
     @include flex(center, space-between);
     @include border($grey-blue-1, $radius: 0.25rem);
 
+    position: relative;
     padding: 0.5rem 1.25rem 0.5rem 0.75rem;
     cursor: pointer;
 
@@ -253,6 +266,7 @@ body{
     .dropdown-context{
         @include flex;
 
+        
         flex-wrap: nowrap;
         gap: 0.25rem;
         color: $grey-3;
@@ -261,6 +275,43 @@ body{
     .dropdown-arrow{
         @extend %dropdown-arrow;
         
+    }
+
+    .dropdown-content{
+        @include flex(flex-end, flex-start, column);
+        @include border($grey-blue-1, $radius: 0.25rem);
+
+        display: none;
+        width: fit-content;
+        padding: 0.625rem;
+        background-color: $white;
+        position: absolute;
+        top: 150%;
+        right: 0;
+        z-index: 10;
+        cursor: initial;
+
+        .dropdown-content-header{
+            display: inline-block;
+            position: relative;
+            transform: translateY(-0.5rem);
+            font-size: 0.875rem;
+            color: $grey-blue-3;
+            font-weight: 600;
+        }
+
+        &::before{
+            @include border($grey-blue-1);
+
+            border-bottom-color: $white; 
+            border-right-color: $white; 
+            transform: translateX(-1rem) translateY(-1.125rem) rotate(45deg);
+            display: inline-block;
+            content: '';
+            width: 1rem;
+            height: 1rem;
+            background-color: $white
+        }
     }
 }
 
@@ -294,8 +345,20 @@ body{
         padding: 0.25rem 0.5rem;
     }
 
+    &.pd-xxs{
+        padding: 0.075rem 0.25rem;
+    }
+
     &.pd-sq{
         padding: 0.75rem;
+    }
+
+    &.pd-sq-sm{
+        padding: 0.25rem;
+    }
+
+    &.mr-right-sm{
+        margin-right: 0.25rem;
     }
 }
 
@@ -644,12 +707,56 @@ body{
             .connect-task-popup-config-innerbox{
                 @include flex;
 
+                border: none;
+                padding: 0;
                 gap: 0.5rem; 
-                cursor: pointer;
                 
-                .dropdown-arrow{
-                    @extend %dropdown-arrow;
+                .dropdown-content{
+                        
+                    &:has(.connect-task-popup-config-priority){
+                        padding-left: 0;
+                        padding-right: 0;
+
+                        .dropdown-content-header{
+                            padding-left: 0.625rem;
+                        }
+                    }
                 }
+
+                .connect-task-popup-config-priority{
+                    list-style: none;
+
+
+                    li{
+
+                        @include flex($justify-content: flex-start);
+
+                        margin-bottom: 0.25rem;
+                        gap: 0.75rem;
+                        padding: 0.5rem 0.75rem;
+                        cursor: pointer;
+
+                        &:hover{
+                            background-color: $light-green;
+
+                            span{
+                                color: $green-1;
+                            }
+                        }
+
+                        div{
+                            width: 1.25rem;
+                            height: 1.25rem;
+                            border-radius: 2px;
+                        }
+
+                        span{
+                            font-size: 0.875rem;
+                            color: $grey-base;
+                        }
+                    }
+                }
+                
             }
         }
 
@@ -657,5 +764,66 @@ body{
         &.hr-center{
             align-items: center;
         }
+    }
+}
+
+
+
+// Calander
+
+.calander{
+    
+}
+
+.calander-layout{
+    @include border($grey-2);
+}
+
+.calander-header{
+    padding: 0.25rem 0.5rem;
+    font-size: 13px;
+    color: $grey-base;
+    border-bottom: 1px solid $grey-2;
+
+    .button{
+        padding: 0.1rem;
+        width: 1rem;
+        height: 1rem;
+    }
+}
+
+.calander-grid{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    place-items: center;
+    gap: 2px;
+    padding: 2px;
+
+    span{
+        display: inline-block;
+        
+        &.day-names{
+            padding: 4px 5px 6px;
+            color: $grey-3;
+            font-size: 0.625rem;
+            font-weight: 600;
+        }
+
+        &.day-numbers{
+            aspect-ratio: 1;
+            text-align: center;
+            padding: 5px;
+            width: 1.5rem;
+            height: 1.5rem;
+            border-radius: 2px;
+            font-size: 0.75rem;
+            color: $grey-blue-2;
+            cursor: pointer;
+
+            &:hover{
+                background-color: $grey-2;
+            }
+        }
+
     }
 }
