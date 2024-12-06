@@ -105,11 +105,11 @@ body{
 }
 
 .ft-xs{
-    font-size: 0.75rem;
+    font-size: 0.75rem !important;
 }
 
 .ft-sm{
-    font-size: 0.875rem;
+    font-size: 0.875rem !important;
 }
 
 .ft-base{
@@ -122,6 +122,14 @@ body{
 
 .ft-underline{
     text-decoration: underline;
+}
+
+.uprcse{
+    text-transform: uppercase;
+}
+
+.wt-400{
+    font-weight: 400 !important;
 }
 
 .wt-700{
@@ -156,6 +164,10 @@ body{
 
 .bg-dark-grey{
     background-color: $grey-2;
+}
+
+.bg-deep-grey{
+    background-color: $grey-base;
 }
 
 .bg-grey-tr{
@@ -284,6 +296,7 @@ body{
         display: none;
         width: fit-content;
         padding: 0.625rem;
+        padding-top: 0;
         background-color: $white;
         position: absolute;
         top: 150%;
@@ -305,7 +318,7 @@ body{
 
             border-bottom-color: $white; 
             border-right-color: $white; 
-            transform: translateX(-1rem) translateY(-1.125rem) rotate(45deg);
+            transform: translateX(-1rem) translateY(-0.5rem) rotate(45deg);
             display: inline-block;
             content: '';
             width: 1rem;
@@ -779,6 +792,7 @@ body{
 
                         .dropdown-content-header{
                             padding-left: 0.625rem;
+                            width: 7.5rem;
                         }
                     }
                 }
@@ -791,8 +805,7 @@ body{
 
                         @include flex($justify-content: flex-start);
 
-                        margin-bottom: 0.25rem;
-                        gap: 0.75rem;
+                        gap: 0.625rem;
                         padding: 0.5rem 0.75rem;
                         cursor: pointer;
 
@@ -805,14 +818,14 @@ body{
                         }
 
                         div{
-                            width: 1.25rem;
-                            height: 1.25rem;
-                            border-radius: 2px;
+                            width: 1.125rem;
+                            height: 1.125rem;
+                            border-radius: 0.25rem;
                         }
 
                         span{
                             font-size: 0.875rem;
-                            color: $grey-base;
+                            color: $grey-blue-5;
                         }
                     }
                 }
